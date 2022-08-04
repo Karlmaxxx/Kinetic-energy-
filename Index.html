@@ -1,0 +1,111 @@
+# Kinetic-energy-<!DOCTYPE html> 
+
+<html> 
+
+    <head> 
+
+        <title>types of energies</title> 
+
+    </head> 
+
+    <body style="background-color:yellow;"> 
+
+        <center><h1>kinetic energy</h1><br> 
+
+        <img src="restcar.jpg" height="250px" width="500px" id="car"><br> 
+
+        <h1 style="text-align:middle;">kinetic energy=1/2*mass*(velocity)^2</h1> 
+
+        <button  style="background-color:green" onclick="kinetic1()" >move</button> 
+
+        <button  style="background-color:red" onclick="kinetic()" >stop</button><br><br> 
+
+        <form name="calckinetic" style="background-color: pink;"> 
+
+           
+
+          <label class="hidden">velocity:</label> <input type="text"name="text1" class="hidden">m/s  
+
+         <br><br> 
+
+         <label class="hidden">weight:</label> <input type="text" name="text2" class="hidden">kg 
+
+         <br><br> 
+
+        kinetic energy:<input type="text" name="textres">kg.(m/s)^2 [or] joules<br><br> 
+
+         <input style="background-color:skyblue ;" type="button" value="find" onclick="calculate()"> 
+
+        </form> 
+
+        </center> 
+
+        <script> 
+
+            function kinetic1() 
+
+            {   
+
+                var status1=document.getElementById("car") 
+
+                  if(status1.src.match("restcar.jpg"))  
+
+                  { 
+
+                    status1.src="movecar.gif"; 
+
+                  }   
+
+                             
+
+            } 
+
+            function kinetic() 
+
+            {   
+
+                var status=document.getElementById("car") 
+
+                  if(status.src.match("movecar.gif"))  
+
+                  { 
+
+                    status.src="restcar.jpg"; 
+
+                  }   
+
+                             
+
+            } 
+
+            function calculate() 
+
+            {   var num1,num2,res; 
+
+                num1=Number(document.calckinetic.text1.value); 
+
+                 num2=Number(document.calckinetic.text2.value); 
+
+                   res=0.5*num2*num1*num1; 
+
+                   document.calckinetic.textres.value=res;  
+
+                      
+
+            } 
+
+             
+
+             
+
+             
+
+             
+
+        </script> 
+
+         
+
+    </body> 
+
+</html>
